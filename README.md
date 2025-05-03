@@ -15,9 +15,12 @@ The MNIST (Modified National Institute of Standards and Technology database) is 
  # Usage
 
 So far I've just made a simple program to generate a bmp from the csv data and you can test it like this.
+
+First unzip the `mnist-in-csv.zip` and then make and run the program
 ```
 make
 ./build/reconstruct-number
 ```
 
 And then you will get something like this!
+![Hand written number 4](/docs/4.bmp)
