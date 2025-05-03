@@ -1,0 +1,35 @@
+# Keep everything in docs
+!docs/
+!docs/**
+
+# Build directory
+build/
+
+# Generated BMP files
+*.bmp
+!docs/**/*.bmp
+
+# Object files
+*.o
+
+# Libraries
+*.lib
+*.a
+
+# Executables
+*.exe
+*.out
+
+# Debug files
+*.dSYM/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS specific files
+.DS_Store
+.directory
+.Trash-*
