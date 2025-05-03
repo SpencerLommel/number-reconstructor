@@ -23,4 +23,5 @@ make
 ```
 
 And then you will get something like this!
+
 ![Hand written number 4](/docs/4.bmp)
