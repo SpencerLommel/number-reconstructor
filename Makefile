@@ -3,16 +3,23 @@ CFLAGS = -Wall -Wextra
 BUILD_DIR = build
 
 # Source files
-SRCS = main.c bmp/bmp.c csv-fast-reader/csv.c
-TARGET = reconstruct-number
+COMMON_SRCS = bmp/bmp.c csv-fast-reader/csv.c
+
+# Targets
+TARGETS = demo line-number
+
 
 # Default target
-all: $(BUILD_DIR)/$(TARGET)
+all: $(TARGETS:%=$(BUILD_DIR)/%)
 
-# Create build directory and compile
-$(BUILD_DIR)/$(TARGET): $(SRCS)
+# Rules for each target
+$(BUILD_DIR)/demo: demo.c $(COMMON_SRCS)
 	mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) $(SRCS) -o $@
+	$(CC) $(CFLAGS) demo.c $(COMMON_SRCS) -o $@
+
+$(BUILD_DIR)/line-number: line-number.c $(COMMON_SRCS)
+	mkdir -p $(BUILD_DIR)
+	$(CC) $(CFLAGS) line-number.c $(COMMON_SRCS) -o $@
 
 # Clean build directory
 clean:
